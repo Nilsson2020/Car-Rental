@@ -1,0 +1,87 @@
+/* Bakgrundsfärgen för hela sidan */
+body {
+    background-color: Grey;
+}
+/* Stil för rubriken */
+h2 {
+    text-align: center;
+    color: #3d4f2d;
+    font-size: 2.2em;
+    margin: 20px auto;
+    width: 80%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Formuläret */
+form {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    background: linear-gradient(Grey, #f9f9f9);
+    width: 80%;
+    position: relative;
+    z-index: 1;
+}
+
+/* marginal i formuläret */
+div {
+    margin-bottom: 15px;
+}
+
+/* Stil för etiketter */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* inmatningsfält och dropdownsen */
+select, input[type="text"], input[type="number"], input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #4B5320;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Fokusstil för inmatningsfält */
+select:focus, input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Stil för knappar */
+button {
+    background-color: #3d4f2d;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover-effekten på knappen */
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* För felmeddelanden */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
