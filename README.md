@@ -1,31 +1,28 @@
-# Fortnox-Car-Rental
-Assuming you have Maven, Java 17, Docker, Node 16 LTS, NPM installed and have started the database. You will need to do the following things to Set up the system to run as designed.
+# Car Rental bootstrap project
 
-Create the following SQL tabels in the database:
+This minimal bootstrap project contains a React UI and a backend powered by Spring, connected to a PostgreSQL database.
+Before you start the project make sure you have Maven, Java 17, Docker ( for easy setup of database ), Node 16 LTS and NPM installed. 
 
-CREATE TABLE car (
-    id BIGSERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    daily_rate DECIMAL(10, 2) NOT NULL
-);
+You will be able to see the text "Hello world!" in the UI if you successfully manage to start the backend, frontend and the database. You are not supposed to use the "hello world" code, its only purpose is to verify that you have everything up and running correctly. 
 
-CREATE TABLE rental (
-    id BIGSERIAL PRIMARY KEY,
-    driver_name VARCHAR(255) NOT NULL,
-    driver_age INT NOT NULL,
-    car_id BIGINT NOT NULL,
-    from_date DATE NOT NULL,
-    to_date DATE NOT NULL,
-    revenue DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (car_id) REFERENCES car(id)
-);
+## How to start the project
 
-Then you need to insert the following data into the table : 
-INSERT INTO car (id, name, daily_rate)
-VALUES
-    (1, 'Volvo S60', 1500.00),
-    (2, 'Volkswagen Golf', 1333.00),
-    (3, 'Ford Mustang', 3000.00),
-    (4, 'Ford Transit', 2400.00);
+#### 1. Set up the database
+You may start a database with the following docker command based on the [Bitnami PostgreSQL Image](https://hub.docker.com/r/bitnami/postgresql/):
 
-Assuming you have all the relevant components up and running, you should now be able to rent a car and see the overview.
+`docker run --name postgresql -p 5432:5432 -e POSTGRESQL_USERNAME=my_user -e POSTGRESQL_PASSWORD=password123 -e POSTGRESQL_DATABASE=rental bitnami/postgresql:latest`
+
+
+#### 2. Start the backend 
+The backend was bootstrapped with [Spring initializr](https://start.spring.io/) and is configured to run against a PostgreSQL database.
+
+Start the backend by running  `com.example.rental.RentalApplication#main`.
+
+
+#### 3. Start the frontend
+The frontend was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+See `package.json` for npm commands. The `package.json` has a proxy for the backend hosted at `http://localhost:8080`.
+
+Start the frontend by doing `npm install` followed by `npm start` in the `frontend` folder
+
