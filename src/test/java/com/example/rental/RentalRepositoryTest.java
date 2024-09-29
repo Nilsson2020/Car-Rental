@@ -78,7 +78,6 @@ class RentalRepositoryTest {
 
     @Test
     void findAll_returnsListOfRentals() {
-        // Arrange
         Rental rental1 = new Rental();
         rental1.setDriverName("Jakob P");
 
