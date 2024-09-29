@@ -32,6 +32,7 @@ class RentalRepositoryTest {
 
     @Test
     void isCarRentedDuringPeriod_returnsTrueWhenCarIsRented() {
+        
         Long carId = 1L;
         LocalDate fromDate = LocalDate.now();
         LocalDate toDate = LocalDate.now().plusDays(1);
