@@ -30,6 +30,10 @@ INSERT INTO car (id, name, daily_rate) VALUES
 (3, 'Ford Mustang', 3000.00),
 (4, 'Ford Transit', 2400.00);
 
+
+**Then you run the RentalApplication class
+**
+
 Then you write:
 
 cd frontend then npm install then npm start
