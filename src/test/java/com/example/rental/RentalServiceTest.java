@@ -35,6 +35,7 @@ class RentalServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
+    
     @Test
     void rentCar_successfulRental() {
         Rental rental = new Rental();
