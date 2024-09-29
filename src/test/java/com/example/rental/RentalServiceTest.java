@@ -37,7 +37,6 @@ class RentalServiceTest {
 
     @Test
     void rentCar_successfulRental() {
-        // Arrange
         Rental rental = new Rental();
         rental.setCarId(1L);
         rental.setFromDate(LocalDate.now().plusDays(1));
@@ -48,16 +47,13 @@ class RentalServiceTest {
         when(carService.getCarById(1L)).thenReturn(carDTO);
         when(rentalRepository.isCarRentedDuringPeriod(1L, rental.getFromDate(), rental.getToDate())).thenReturn(false);
 
-        // Act
         rentalService.rentCar(rental);
 
-        // Assert
         verify(rentalRepository, times(1)).save(rental);
     }
 
     @Test
     void getAllRentals_returnsRentalResponseList() {
-        // Arrange
         List<Rental> rentals = new ArrayList<>();
         Rental rental = new Rental();
         rental.setCarId(1L);
@@ -69,10 +65,8 @@ class RentalServiceTest {
         when(rentalRepository.findAll()).thenReturn(rentals);
         when(carService.getCarById(1L)).thenReturn(carDTO);
 
-        // Act
         List<RentalResponse> rentalResponses = rentalService.getAllRentals();
 
-        // Assert
         assertEquals(1, rentalResponses.size());
         assertEquals("John Doe", rentalResponses.get(0).getDriverName());
     }
