@@ -31,7 +31,7 @@ INSERT INTO car (id, name, daily_rate) VALUES
 (4, 'Ford Transit', 2400.00);
 
 
-**Then you run the RentalApplication class
+**Then you run the RentalApplication method
 **
 
 Then you write:
