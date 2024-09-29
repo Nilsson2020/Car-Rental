@@ -32,9 +32,7 @@ INSERT INTO car (id, name, daily_rate) VALUES
 
 Then you write:
 
-cd frontend
-npm install
-npm start
+cd frontend then npm install then npm start
 
 Following this should allow you to get the application running on your localhost  
 
