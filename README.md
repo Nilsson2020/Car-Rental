@@ -1,6 +1,6 @@
-As long as you have the bootstap set up ofMaven, Java 17, Docker ( for easy setup of database ), Node 16 LTS and NPM installed.
+As long as you have Maven, Java 17, Docker ( for easy setup of database ), Node 16 LTS and NPM installed.
 
-You can start the data base with the same set up as the bootstrap:
+You can start the data base with the following setup in command line:
 docker run --name postgresql -p 5432:5432 -e POSTGRESQL_USERNAME=my_user 
 -e POSTGRESQL_PASSWORD=password123 -e POSTGRESQL_DATABASE=rental bitnami/postgresql:latest
 
